@@ -1,0 +1,32 @@
+### Notes
+GET http://localhost:3001/api/notes
+
+### Notes
+POST http://localhost:3001/api/notes/ HTTP/1.1
+content-type: application/json
+
+{
+    "content": "sample",
+    "important": true
+}
+
+### Persons
+GET http://localhost:3001/api/persons
+
+### Persons
+GET http://localhost:3001/api/pppppersons/5
+
+###
+POST http://localhost:3001/api/persons
+content-type: application/json
+
+{
+   "name":"Liisa Marttinen",
+    "number":"040-243563"
+}
+
+### Persons
+DELETE http://localhost:3001/api/persons/2
+
+### Info
+GET http://localhost:3001/api/info
