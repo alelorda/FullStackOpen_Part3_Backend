@@ -79,6 +79,7 @@ let  persons = [
 // Importamos express
 const express = require('express')
 var morgan = require('morgan')
+const cors = require('cors')
 morgan('tiny')
 // Se crea una aplicación express almacenada en la variable app
 const app = express() 
@@ -87,7 +88,7 @@ app.use(express.json())
 morgan.token("code", function getCode(req) {
   return JSON.stringify(req.body);
  });
-
+ app.use(cors())
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :code'))
 //app.use(morgan(`:method :url :status :res[content-length] - :response-time ms {:response}`))
 // app.use(morgan.token('type', function (req, res) { return req.headers['content-type'] }))
