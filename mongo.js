@@ -10,6 +10,7 @@ const name = process.argv[3]
 const number = process.argv[4]
 const url = `mongodb+srv://fullstack:${password}@cluster0.fldmyjv.mongodb.net/note-app?retryWrites=true&w=majority`
 
+mongoose.set("strictQuery", false);
 mongoose.connect(url)
 
 const noteSchema = new mongoose.Schema({
