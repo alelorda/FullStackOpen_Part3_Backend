@@ -6,7 +6,7 @@ POST http://localhost:3001/api/notes/ HTTP/1.1
 content-type: application/json
 
 {
-    "content": "sample",
+    "content": "sale",
     "important": true
 }
 
@@ -14,7 +14,7 @@ content-type: application/json
 GET http://localhost:3001/api/persons
 
 ### Persons
-GET http://localhost:3001/api/pppppersons/5
+GET http://localhost:3001/api/persons/1
 
 ###
 POST http://localhost:3001/api/persons
