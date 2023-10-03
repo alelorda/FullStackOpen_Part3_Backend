@@ -1,8 +1,9 @@
 const mongoose = require('mongoose')
+var uniqueValidator = require('mongoose-unique-validator');
 const url = process.env.MONGODB_URI
 
 mongoose.connect(url).then(result => {
-    console.log('connected to MongoDB')
+  console.log('connected to MongoDB - Note Models')
   })
   .catch((error) => {
     console.log('error connecting to MongoDB:', error.message)
@@ -12,7 +13,8 @@ const noteSchema = new mongoose.Schema({
   content: {
     type: String,
     minlength: 5,
-    required: true
+    required: true,
+    unique:true
   },
   date: { 
     type: Date,
@@ -20,6 +22,7 @@ const noteSchema = new mongoose.Schema({
   },
   important: Boolean
 })
+noteSchema.plugin(uniqueValidator);
 
 noteSchema.set('toJSON', {
   transform: (document, returnedObject) => {

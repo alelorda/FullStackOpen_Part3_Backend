@@ -6,7 +6,7 @@ POST http://localhost:3001/api/notes/ HTTP/1.1
 content-type: application/json
 
 {
-    "content": "sale",
+    "content": "saale",
     "important": true
 }
 
@@ -21,7 +21,7 @@ POST http://localhost:3001/api/persons
 content-type: application/json
 
 {
-   "name":"Liisa Marttinen",
+   "name":"alexis",
     "number":"040-243563"
 }
 
